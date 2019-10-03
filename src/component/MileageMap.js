@@ -110,7 +110,7 @@ const getRandomColor = ["#4F33FF", "#334681", "#9B59B6", "#D63031"];
 const MileageMap = compose(
   withProps({
     googleMapURL:
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyBWyyK5gkujBpxYNim55MUoSfo6cDWJM6w&v=3.exp",
+      "https://maps.googleapis.com/maps/api/js?key=${API_KEY}&v=3.exp",
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div key="klj" style={{ height: `400px`,width:'1100px',marginBottom:"50px;" }} />,
     mapElement: <div style={{ height: `100%` }} />

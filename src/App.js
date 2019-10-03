@@ -13,9 +13,6 @@ class App extends React.Component {
         fromLng: 0,
         toLat: 0,
         toLng: 0,
-        distance: 0,
-        meters: 0,
-        via: "",
         geoCodedWayPoints: []
       }
     ]
@@ -101,15 +98,12 @@ class App extends React.Component {
     const wayPoint = {
       id: uuid.v4(),
       fromAddress: "",
-      toAddress: "",
-      fromLat: 0,
-      fromLng: 0,
-      toLat: 0,
-      toLng: 0,
-      via: "",
-      distance: 0,
-      meters: 0,
-      geoCodedWayPoints: []
+        toAddress: "",
+        fromLat: 0,
+        fromLng: 0,
+        toLat: 0,
+        toLng: 0,
+        geoCodedWayPoints: []
     };
     wayPoints.push(wayPoint);
     this.setState({ wayPoints: wayPoints });
@@ -133,7 +127,7 @@ class App extends React.Component {
     let data = "";
     try {
       data = await fetch(
-        `http://localhost:3001/getRoute?from=${from}&to=${to}`
+        `http://localhost:3001/getRoute?source=${from}&destination=${to}`
       );
     } catch (error) {
       console.log(error);
